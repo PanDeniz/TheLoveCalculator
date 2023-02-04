@@ -1,0 +1,16 @@
+body{background-color: #FFBBCC;}
+
+
+
+.heart{display: flex; position: fixed;}
+.heart div{ background-color: #FF597B;}
+.circle {border: 1px solid #FF597B; width: 41px; height: 40px; border-radius: 50%;}
+.rect{border: 1px solid #FF597B; width: 40px; height: 40px; rotate: 45deg;}
+
+#first{position: relative; left: 1px;}
+#second{position: relative; right: 13px;}
+#third{position: relative; right: 70px; top: 15px;}
+#bubble2{position: relative; width: 39px; height: 25px; border-radius: 50%; background-color: rgb(244, 183, 193, 0.4); right: 130px; top: 1px; rotate: -25deg;}
+#bubble{position: relative; width: 20px; height: 10px; border-radius: 50%; background-color: rgb(255, 254, 254, 0.7); right: 160px; top: 5px; rotate: -25deg;}
+
+.top{text-align: center;}
