@@ -1,5 +1,11 @@
-body{background-color: #FFBBCC;}
-
+*{padding: 0; margin: 0;}
+body{
+    background: black; 
+    background-image: url(./R.png);
+    background-position: top;
+    background-size: 30px;
+}
+.screen{width: 700px; height: 1000px; margin: 0 auto; background-color: #F9B5D0;}
 
 
 .heart{display: flex; position: fixed;}
