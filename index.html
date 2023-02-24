@@ -47,22 +47,18 @@
             <input type="text" id="person2">
             <br>
             <br>
-            <button>Calculate!</button>
+            <button class="button1">Calculate!</button>
             </div>
+
+            <p></p>
         </div>
 
         <div class="bottom">
+            <p>Would you like to do the test again? <br> Then click <em class="reload"><b>here</b></em></p>
             <p id="disclaimer"><b>Disclaimer:</b> It is not very likely to get a hundred percent probability, therefore there is no guarantee of any kind that the relationship will work out between these two people. No record is being kept of any information entered by the user of this program. The creators of this program are in no way liable of any actions which might be taken by users of this program. Please note that this site has no serious intention whatsoever.</p>
         </div>
     </div>
-
     <script src="./animate.js"></script>
-    <script>
-    $("button").click(function(){
-        $(".middle div").css("visibility", "collapse");
-        $(".middle h4").text("<?php $x = rand(0, 100); echo "$x%" ?>").css({"color": "purple", "font-size": "1000%"}).fadeOut(200).fadeIn(200);
-    })
-</script>
 </body>
 
 
