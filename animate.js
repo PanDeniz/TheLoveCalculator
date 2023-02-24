@@ -11,6 +11,7 @@ $(".button1").click(function(){
     $(".middle div").css("visibility", "collapse");
     $(".middle h4").text(`${x}%`).css({"color": "purple", "font-size": "1000%"}).fadeOut(200).fadeIn(200);
     $(".middle div p").css("visibility", "visible");
+    $(".re").css("visibility", "visible");
 
     if(x>=90){
         $(".middle p").text("You are soul mates!!!");
