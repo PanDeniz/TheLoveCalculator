@@ -34,6 +34,7 @@ body{
 .bottom p{padding: 10px;}
 #disclaimer{font-size: 7px;}
 
+.re{visibility: collapse;}
 .reload{color: blueviolet; cursor: pointer;}
 
 
