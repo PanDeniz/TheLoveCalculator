@@ -10,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
 </head>
+
 <body>
     
     <div class="screen">
@@ -39,7 +40,7 @@
         </div>
     
         <div class="middle">
-            <h4>Please enter two names!</h4>
+            <h4 id="perc">Please enter two names!</h4>
             <input type="text" id="person1">
              &#128152;
             <input type="text" id="person2">
@@ -54,5 +55,12 @@
     </div>
 
     <script src="./animate.js"></script>
+    <script>
+    $("button").click(function(){
+        $("#perc").text("<?php $x = rand(0, 100); echo "$x%" ?>").css({"color": "purple", "font-size": "1000%"});
+    })
+</script>
 </body>
+
+
 </html>
