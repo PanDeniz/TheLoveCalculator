@@ -1,4 +1,5 @@
 *{padding: 0; margin: 0;}
+
 body{
     background: black; 
     background-image: url(./heart.png);
@@ -7,7 +8,7 @@ body{
 }
 .screen{width: 50%; height: 100%; margin: 0 auto; background-color: #F9B5D0;}
 
-
+ 
 .heart{display: flex; position: fixed; margin: 5px;}
 .heart div{ background-color: #FF597B;  cursor: pointer;}
 .heart img{position: absolute; visibility: hidden;}
@@ -25,13 +26,16 @@ body{
 #bubble{position: relative; width: 20px; height: 10px; border-radius: 50%; background-color: rgb(255, 254, 254, 0.7); right: 160px; top: 5px; rotate: -25deg;}
 
 .top{text-align: center;}
-.top h1{margin-bottom: 30px;} 
-
-.bottom{ margin-top: 410px;}
-#disclaimer{font-size: 7px;}
-
+.top h1{margin-bottom: 30px;}
 
 .middle{margin-top: 400px; text-align: center;}
+
+.bottom{ margin-top: 410px;}
+.bottom p{padding: 10px;}
+#disclaimer{font-size: 7px;}
+
+.reload{color: blueviolet; cursor: pointer;}
+
 
 
 @media screen and (max-width: 850px) {
