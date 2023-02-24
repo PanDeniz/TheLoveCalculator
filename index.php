@@ -8,7 +8,6 @@
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-
 </head>
 
 <body>
@@ -40,13 +39,16 @@
         </div>
     
         <div class="middle">
-            <h4 id="perc">Please enter two names!</h4>
+            <h4>Please enter two names!</h4>
+
+            <div>
             <input type="text" id="person1">
              &#128152;
             <input type="text" id="person2">
             <br>
             <br>
             <button>Calculate!</button>
+            </div>
         </div>
 
         <div class="bottom">
@@ -57,7 +59,8 @@
     <script src="./animate.js"></script>
     <script>
     $("button").click(function(){
-        $("#perc").text("<?php $x = rand(0, 100); echo "$x%" ?>").css({"color": "purple", "font-size": "1000%"});
+        $(".middle div").css("visibility", "collapse");
+        $(".middle h4").text("<?php $x = rand(0, 100); echo "$x%" ?>").css({"color": "purple", "font-size": "1000%"}).fadeOut(200).fadeIn(200);
     })
 </script>
 </body>
