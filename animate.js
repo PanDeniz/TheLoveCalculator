@@ -11,6 +11,7 @@ $(".button1").click(function(){
     $(".middle h4").text(`Calculating...`);
     $("#calculate1").css({"visibility" :"visible", "position" : "relative"});
     $("#calculate2").css({"visibility" :"visible", "position" : "relative"}).animate({width: "50%"},2000, function(){
+        
         $("#calculate1").css("visibility", "collapse");
         $("#calculate2").css("visibility", "collapse");
         $(".middle h4").text(`${x}%`).css({"color": "purple", "font-size": "650%"}).fadeOut(200).fadeIn(200);
@@ -18,15 +19,15 @@ $(".button1").click(function(){
         $(".re").css("visibility", "visible");
     
         if(x>=90){
-            $(".middle p").text("You are soul mates!!!");
+            $(".middle .explanation1").text("You are soul mates!!!");
         }else if(x>=70){
-            $(".middle p").text("You are in love");
+            $(".middle .explanation1").text("You are in love");
         }else if(x>=40){
-            $(".middle p").text("You are like friends but nothing more");
+            $(".middle .explanation1").text("You are like friends but nothing more");
         }else if(x>=10){
-            $(".middle p").text("You can bareley resist each other");
+            $(".middle .explanation1").text("You can bareley resist each other");
         }else{
-            $(".middle p").text("HATRED");
+            $(".middle .explanation1").text("HATRED");
         }
     });
 
