@@ -8,13 +8,13 @@ $(".heart div").click(function(){
 $(".button1").click(function(){
     var x = Math.floor(Math.random()*101);
     $(".middle .colapseIt").css("visibility", "collapse");
-    $(".middle h4").text(`Calculating...`);
+    $(".middle .percent").text(`Calculating...`);
     $("#calculate1").css({"visibility" :"visible", "position" : "relative"});
     $("#calculate2").css({"visibility" :"visible", "position" : "relative"}).animate({width: "50%"},2000, function(){
         
         $("#calculate1").css("visibility", "collapse");
         $("#calculate2").css("visibility", "collapse");
-        $(".middle h4").text(`${x}%`).css({"color": "purple", "font-size": "650%"}).fadeOut(200).fadeIn(200);
+        $(".middle .percent").text(`${x}%`).css({"color": "purple", "font-size": "650%"}).fadeOut(200).fadeIn(200);
         $(".middle div p").css("visibility", "visible");
         $(".re").css("visibility", "visible");
     
