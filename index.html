@@ -8,6 +8,9 @@
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Italianno&family=New+Rocker&family=Teko&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -33,21 +36,59 @@
     
         <div class="top">
             <h1>&#128151; The Love Calculator &#128151;</h1>
-            <p>It is now possible to find whether the one that you love loves you back</p>
-            <p>with this scientific based love calculator.</p>
-            <p>All you need to do is enter your name and the name of your loved one and bum...&#128165;</p>
+            <p>It is now possible to find whether the one that you love loves you back with this scientific based love calculator. </p> <br>
+            <p>All you need to do is make this little test and let it calculate, so what are you waiting for?</p>
         </div>
     
         <div class="middle">
-            <h4>Please enter two names!</h4>
+
+            <div class="test">
+                <p> <b>Tips before solving the test:</b>
+                    <li>It will not take more than 5 minutes!</li>
+                    <li>Try to be honest with your feelings!</li>
+                    <li>Try to enter your cat's name!</li>
+                    <li>More hearts more score, nothing is impossiiiiible!</li>
+                </p>
+                <br>
+                <hr>
+                <br>
+                <h4>1 )Are you happy around him/her/it?</h4>
+                <input type="radio" class="yes">Yes
+                <input type="radio" class="no">No
+
+                <br><br>
+                <h4>2 )Is it/he/she hurting you?</h4>
+                <input type="radio" class="yes">Yes
+                <input type="radio" class="no">No
+
+                <br><br>
+                <h4>3 )Is there any eye contact?</h4>
+                <input type="radio" class="yes">Yes
+                <input type="radio" class="no">No
+
+                <br><br>
+                <h4>4 )Do you think he/she/it is also loves you but shy or not ready yet to express it?</h4>
+                <input type="radio" class="yes">Yes
+                <input type="radio" class="no">No
+
+                <br><br>
+                <h4>5 )Type anything you want about him/her/it!</h4>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                <br><br>
+                <h4>6 ) And finally please enter two full-names!</h4>
+                <input type="text" id="person1">
+                &#128152;
+               <input type="text" id="person2">
+            </div>
+
+            <h4 class="percent"></h4>
             <p class="explanation1"></p>
             <div id="calculate1"></div>
             <div id="calculate2"></div>
             
             <div class="colapseIt">
-            <input type="text" id="person1">
-             &#128152;
-            <input type="text" id="person2">
+
             <br>
             <br>
             <button class="button1">Calculate!</button>
