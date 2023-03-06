@@ -8,11 +8,12 @@ $(".heart div").click(function(){
 
 $(".button1").click(function(){
 
-    for(var i=1; i<=4; i++){
+    for(var i=1; i<=7; i++){
         check(i);
     }
+
     
-    if(!($(`.radio div`).hasClass('NoInput'))){
+    //if(!($(`.test div`).hasClass('NoInput'))){
         var x = Math.floor(Math.random()*101);
         $(".middle .colapseIt").css("visibility", "collapse");
         $(".middle .percent").text(`Calculating...`);
@@ -22,7 +23,8 @@ $(".button1").click(function(){
             $("#calculate1").css("visibility", "collapse");
             $("#calculate2").css("visibility", "collapse");
             $(".middle .percent").text(`${x}%`).css({"color": "purple", "font-size": "650%"}).fadeOut(200).fadeIn(200);
-            $(".middle div p").css("visibility", "visible");
+            $(".middle h").css("visibility", "visible");
+            $(".middle p").css("visibility", "visible");
             $(".re").css("visibility", "visible");
         
             if(x>=90){
@@ -36,31 +38,33 @@ $(".button1").click(function(){
             }else{
                 $(".middle .explanation1").text("HATRED");
             }
+
         });
-    }
-        /*for(var j=1; j<=4; j++){
-            $(`#y${j}`).prop('checked', false);
-            $(`#n${j}`).prop('checked', false);
-        }*/
+    //}
 
 })
 
 $(".reload").click(function(){
-    for(var j=1; j<=4; j++){
+    for(var j=1; j<=7; j++){
         $(`#y${j}`).prop('checked', false);
         $(`#n${j}`).prop('checked', false);
+        $(`#txt${j}`).val(``);
     }
+    
     window.location.reload();
 })
 
 function check(i){
-    if(!($(`#y${i}`).is(':checked') || $(`#n${i}`).is(':checked'))){
+    if(!($(`#y${i}`).is(':checked') || $(`#n${i}`).is(':checked')) && !($(`#txt${i}`).val())){
         $(`.Q${i}`).addClass('NoInput').fadeOut(200).fadeIn(200);
     }
     $(`#y${i}`).click(function(){
         $(`.Q${i}`).removeClass('NoInput');
     })
     $(`#n${i}`).click(function(){
+        $(`.Q${i}`).removeClass('NoInput');
+    })
+    $(`#txt${i}`).keypress(function(){
         $(`.Q${i}`).removeClass('NoInput');
     })
 }
