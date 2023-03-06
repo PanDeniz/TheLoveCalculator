@@ -1,59 +1,70 @@
-*{padding: 0; margin: 0;}
-
-body{
-    background: rgb(100, 0, 100); 
-    background-image: url(./heart.png);
-    background-repeat: round;
-    background-size: 20%;
-    font-family: 'Emilys Candy', cursive;
-
-}
-.screen{width: 60%; height: 100%; margin: 0 auto; background-color: #F9B5D0; border: 2px solid black;}
-
  
-/*heart*/
-.heart{display: flex; position: fixed; margin: 5px;}
-.heart div{ background-color: red;  cursor: pointer;}
-.heart img{position: absolute; visibility: hidden;}
-.heart .bolt{ width: 30px; height: 30px; opacity: 0.6; left: 20px; top: 15px;}
-.heart .protector{width: 120px; height: 120px; opacity: 0.6; left: -30px; top: -30px;}
-.heart .light{width: 1500px; height: 1500px; opacity: 0.3; top: -350px; left: -520px;}
-.heart .lighto{width: 1500px; height: 1500px; opacity: 0.3; top: -350px; left: -910px; transform: scaleX(-1);}
-.circle {border: 1px solid red; width: 41px; height: 40px; border-radius: 50%;}
-.rect{border: 1px solid red; width: 40px; height: 40px; rotate: 45deg;}
-
-#first{position: relative; left: 0px;}
-#second{position: relative; right: 13px;}
-#third{position: relative; right: 70px; top: 15px;}
-#bubble2{position: relative; width: 39px; height: 30px; border-radius: 50%; background-color: rgb(244, 183, 193, 0.4); right: 128px; top: 1px; rotate: -25deg;}
-#bubble{position: relative; width: 20px; height: 10px; border-radius: 50%; background-color: rgb(255, 254, 254, 0.7); right: 160px; top: 5px; rotate: -25deg;}
-
-/*top*/
-.top{text-align: center;}
-.top h1{margin-bottom: 30px; background-color: plum;}
-
-/*middle*/
-.middle{margin-top: 100px; text-align: center; align-items: center;}
-.test{text-align: left; margin-left: 15px; margin-right: 10px;}
-#calculate1{border: 2px solid black; width: 50%; margin: 0 auto; height: 15px; visibility: collapse; position: absolute; background-color: rgb(255, 255, 255);}
-#calculate2{border: 0px solid black; width: 0%; margin-left: 25%; height: 15px; margin-top: -16px; visibility: collapse; position: absolute; background-color: greenyellow;}
-.NoInput{color: red; border: 3px solid red;}
-.name{display: flex;}
-#nameHeart{margin-left: 10px;margin-right: 10px; margin-top: 20px;}
-.explanation2{visibility: collapse; text-align: left; margin: 15px;}
-
-/*bottom*/
-.bottom{ margin-top: 100px;}
-.bottom p{padding: 10px;}
-#disclaimer{font-size: 7px;}
-
-.re{visibility: collapse;}
-.reload{color: blueviolet; cursor: pointer;}
+$(".heart div").click(function(){
+    $(".top").empty();
+    $(".heart img").css("visibility", "visible");
+    window.open("https://www.linkedin.com/in/boran-deniz-d%C3%BCzg%C3%BCn-62ba691ba/");
+})
 
 
-@media screen and (max-width: 850px) {
-    .top h1{font-size: large;}
-    .middle #person1{width: 80px;}
-    .middle #person2{width: 80px;}
-    .heart{visibility: collapse;}
+$(".button1").click(function(){
+
+    for(var i=1; i<=7; i++){
+        check(i);
+    }
+
+    
+    //if(!($(`.test div`).hasClass('NoInput'))){
+        var x = Math.floor(Math.random()*101);
+        $(".middle .colapseIt").css("visibility", "collapse");
+        $(".middle .percent").text(`Calculating...`);
+        $("#calculate1").css({"visibility" :"visible", "position" : "relative"});
+        $("#calculate2").css({"visibility" :"visible", "position" : "relative"}).animate({width: "50%"},2000, function(){
+            
+            $("#calculate1").css("visibility", "collapse");
+            $("#calculate2").css("visibility", "collapse");
+            $(".middle .percent").text(`${x}%`).css({"color": "purple", "font-size": "650%"}).fadeOut(200).fadeIn(200);
+            $(".middle h").css("visibility", "visible");
+            $(".middle p").css("visibility", "visible");
+            $(".re").css("visibility", "visible");
+        
+            if(x>=90){
+                $(".middle .explanation1").text("You are soul mates!!!");
+            }else if(x>=70){
+                $(".middle .explanation1").text("You are in love");
+            }else if(x>=40){
+                $(".middle .explanation1").text("You are like friends but nothing more");
+            }else if(x>=10){
+                $(".middle .explanation1").text("You can bareley resist each other");
+            }else{
+                $(".middle .explanation1").text("HATRED");
+            }
+
+        });
+    //}
+
+})
+
+$(".reload").click(function(){
+    for(var j=1; j<=7; j++){
+        $(`#y${j}`).prop('checked', false);
+        $(`#n${j}`).prop('checked', false);
+        $(`#txt${j}`).val(``);
+    }
+    
+    window.location.reload();
+})
+
+function check(i){
+    if(!($(`#y${i}`).is(':checked') || $(`#n${i}`).is(':checked')) && !($(`#txt${i}`).val())){
+        $(`.Q${i}`).addClass('NoInput').fadeOut(200).fadeIn(200);
+    }
+    $(`#y${i}`).click(function(){
+        $(`.Q${i}`).removeClass('NoInput');
+    })
+    $(`#n${i}`).click(function(){
+        $(`.Q${i}`).removeClass('NoInput');
+    })
+    $(`#txt${i}`).keypress(function(){
+        $(`.Q${i}`).removeClass('NoInput');
+    })
 }
