@@ -10,7 +10,7 @@ body{
 }
 .screen{width: 60%; height: 100%; margin: 0 auto; background-color: #F9B5D0; border: 2px solid black;}
 
-
+ 
 /*heart*/
 .heart{display: flex; position: fixed; margin: 5px;}
 .heart div{ background-color: red;  cursor: pointer;}
@@ -34,9 +34,10 @@ body{
 
 /*middle*/
 .middle{margin-top: 100px; text-align: center; align-items: center;}
-.test{text-align: left; margin-left: 15px;}
+.test{text-align: left; margin-left: 15px; margin-right: 10px;}
 #calculate1{border: 2px solid black; width: 50%; margin: 0 auto; height: 15px; visibility: collapse; position: absolute; background-color: rgb(255, 255, 255);}
 #calculate2{border: 0px solid black; width: 0%; margin: 25%; height: 15px; margin-top: -16px; visibility: collapse; position: absolute; background-color: greenyellow;}
+.NoInput{color: red; border: 3px solid red; box-shadow: 5cm;}
 
 /*bottom*/
 .bottom{ margin-top: 410px;}
