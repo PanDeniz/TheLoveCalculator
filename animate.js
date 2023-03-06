@@ -13,7 +13,7 @@ $(".button1").click(function(){
     }
 
     
-    //if(!($(`.test div`).hasClass('NoInput'))){
+    if(!($(`.test div`).hasClass('NoInput'))){
         var x = Math.floor(Math.random()*101);
         $(".middle .colapseIt").css("visibility", "collapse");
         $(".middle .percent").text(`Calculating...`);
@@ -40,7 +40,7 @@ $(".button1").click(function(){
             }
 
         });
-    //}
+    }
 
 })
 
